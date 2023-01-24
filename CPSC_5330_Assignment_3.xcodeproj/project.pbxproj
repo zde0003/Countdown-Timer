@@ -13,6 +13,7 @@
 		5C2C69DF297590F400E18EBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2C69DD297590F400E18EBE /* Main.storyboard */; };
 		5C2C69E1297590F500E18EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C2C69E0297590F500E18EBE /* Assets.xcassets */; };
 		5C2C69E4297590F500E18EBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2C69E2297590F500E18EBE /* LaunchScreen.storyboard */; };
+		5C7CD0B9297F6938002172B7 /* 3-01 Counterattack.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5C7CD0B8297F6938002172B7 /* 3-01 Counterattack.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5C2C69E0297590F500E18EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C2C69E3297590F500E18EBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C2C69E5297590F500E18EBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7CD0B8297F6938002172B7 /* 3-01 Counterattack.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "3-01 Counterattack.m4a"; path = "../../../../../../../.Trash/3-01 Counterattack.m4a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				5C2C69E0297590F500E18EBE /* Assets.xcassets */,
 				5C2C69E2297590F500E18EBE /* LaunchScreen.storyboard */,
 				5C2C69E5297590F500E18EBE /* Info.plist */,
+				5C7CD0B8297F6938002172B7 /* 3-01 Counterattack.m4a */,
 			);
 			path = CPSC_5330_Assignment_3;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 				5C2C69E4297590F500E18EBE /* LaunchScreen.storyboard in Resources */,
 				5C2C69E1297590F500E18EBE /* Assets.xcassets in Resources */,
 				5C2C69DF297590F400E18EBE /* Main.storyboard in Resources */,
+				5C7CD0B9297F6938002172B7 /* 3-01 Counterattack.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

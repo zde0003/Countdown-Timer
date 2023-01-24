@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CPSC_5330_Assignment_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Day" translatesAutoresizingMaskIntoConstraints="NO" id="3ja-dR-DBn">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JKn-u9-8j9" userLabel="Top">
+                                <rect key="frame" x="0.0" y="100" width="393" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Clock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMo-F9-Qr9">
+                                        <rect key="frame" x="146.66666666666663" y="0.0" width="99.666666666666686" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oqb-ZM-IOa" userLabel="Middle">
+                                <rect key="frame" x="36.666666666666629" y="318" width="320" height="216"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0u-hF-3ar">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                        <connections>
+                                            <action selector="getPicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="7SY-de-OCF"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kqB-5V-VNL" userLabel="Bottom">
+                                <rect key="frame" x="0.0" y="742" width="393" height="76"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0BZ-Ce-ewv">
+                                        <rect key="frame" x="68.333333333333371" y="0.0" width="256.66666666666663" height="38"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Start Timer / Stop Music"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start Timer / Stop Music">
+                                            <backgroundConfiguration key="background">
+                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwO-Yj-loE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3U-zi-0y0">
+                                        <rect key="frame" x="128.66666666666663" y="38" width="136" height="38"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kqB-5V-VNL" secondAttribute="trailing" id="7rv-Dh-ldM"/>
+                            <constraint firstAttribute="bottom" secondItem="3ja-dR-DBn" secondAttribute="bottom" id="E0d-tC-1yR"/>
+                            <constraint firstAttribute="bottom" secondItem="kqB-5V-VNL" secondAttribute="bottom" constant="34" id="GRp-Ee-Tr9"/>
+                            <constraint firstItem="JKn-u9-8j9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="MRG-z5-6FT"/>
+                            <constraint firstItem="3ja-dR-DBn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="NLq-Sd-MWo"/>
+                            <constraint firstAttribute="trailing" secondItem="JKn-u9-8j9" secondAttribute="trailing" id="OcI-yY-EOv"/>
+                            <constraint firstItem="JKn-u9-8j9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TZN-kl-qyR"/>
+                            <constraint firstItem="oqb-ZM-IOa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ddM-kJ-o6V"/>
+                            <constraint firstItem="kqB-5V-VNL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dhd-3M-SvZ"/>
+                            <constraint firstItem="oqb-ZM-IOa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iqH-of-dNC"/>
+                            <constraint firstItem="3ja-dR-DBn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="lnC-aM-AzJ"/>
+                            <constraint firstItem="3ja-dR-DBn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zq2-On-Feg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="3ja-dR-DBn" id="NZw-CK-FCb"/>
+                        <outlet property="button" destination="0BZ-Ce-ewv" id="XHF-o9-eb4"/>
+                        <outlet property="datePicker" destination="r0u-hF-3ar" id="Rg0-Q5-cKS"/>
+                        <outlet property="liveClock" destination="XMo-F9-Qr9" id="bgm-0J-AIT"/>
+                        <outlet property="timeRemaining" destination="V3U-zi-0y0" id="7AL-bv-Kgk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Day" width="333.33334350585938" height="500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
